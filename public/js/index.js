@@ -6,7 +6,7 @@ checkLogged();
 
 //Logar no sistema
 document.getElementById("login-form").addEventListener("submit", function(e) {
-e.preventDefault();
+    e.preventDefault();
 
     const email = document.getElementById("email-input").value;
     const password = document.getElementById("password-input").value;
@@ -22,7 +22,7 @@ e.preventDefault();
     if(account) {
         if(account.password !== password) {
         alert("Opps! Verifique o usuáriuo ou a senha."); 
-        return;   
+        return;    
         }
 
         saveSession(email, checkSession);
@@ -46,7 +46,7 @@ document.getElementById("create-form").addEventListener("submit", function(e) {
         alert("Preencha a senha com no mínimo 4 dígitos");
         return;
     }
-    
+
     saveAccount({
         login: email,
         password: password,
