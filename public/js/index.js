@@ -5,7 +5,7 @@ const session = localStorage.getItem("session");
 checkLogged();
 
 //Logar no sistema
-document.getElementById("login-form").addEventListener("submit", function(e) {
+document.getElementById("Login-form").addEventListener("click", function(e) {
     e.preventDefault();
 
     const email = document.getElementById("email-input").value;
@@ -33,7 +33,7 @@ document.getElementById("login-form").addEventListener("submit", function(e) {
 });
 
 //Criar conta
-document.getElementById("create-form").addEventListener("submit", function(e) {
+document.getElementById("register-modal").addEventListener("submit", function(e) {
     e.preventDefault();
 
     const email = document.getElementById("email-create-input").value;
@@ -50,7 +50,7 @@ document.getElementById("create-form").addEventListener("submit", function(e) {
     saveAccount({
         login: email,
         password: password,
-        tansactions:[]
+        transactions:[]
     });
 
     myModal.hide();
